@@ -1,0 +1,29 @@
+[
+    {
+        "name": "getlistnumeros",
+        "parameters": [
+            {
+                "name": "person",
+                "type": "integer",
+                "description": "unique id for a person"
+            }
+        ],
+        "description": "get a person with all its phone numbers",
+        "services": [
+            {
+                "url": "http://172.17.0.3:9002/person/{person}",
+                "type": "object",
+                "parameters": [
+                    "person"
+                ]
+            },
+            {
+                "url": "http://172.17.0.2:9001/phone/{person}",
+                "type": "list",
+                "parameters": [
+                    "person"
+                ]
+            }
+        ]
+    }
+]
